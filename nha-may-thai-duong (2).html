@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nha May Thai Duong - Dong Phuc Chuyen Nghiep</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0C1B33;--navy2:#152644;--navy3:#1E3460;--gold:#B8922A;--goldl:#D4AF60;--goldp:#F2E8D0;--cream:#FAF8F4;--w:#FFFFFF;--g1:#2D3748;--g2:#6B7280;--g3:#E2E8F0}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--g1);overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--navy)}::-webkit-scrollbar-thumb{background:var(--gold)}
+.topbar{background:var(--navy2);padding:8px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(184,146,42,.3)}
+.topbar span,.topbar a{font-size:11px;color:var(--goldl);letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}.topbar a{margin-left:16px}
+nav{background:var(--navy);padding:0 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--gold)}
+.nb{display:flex;align-items:center;gap:14px;padding:14px 0}
+.bm{width:42px;height:42px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:700;flex-shrink:0}
+.bn h1{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--w);letter-spacing:3px;font-weight:600;line-height:1}
+.bn p{font-size:9px;color:var(--goldl);letter-spacing:3px;text-transform:uppercase;margin-top:3px}
+.nl{display:flex;align-items:center}
+.nl a{color:rgba(255,255,255,.7);text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:22px 15px;transition:all .2s;border-bottom:2px solid transparent;display:block;font-weight:500}
+.nl a:hover,.nl a.act{color:var(--w);border-bottom-color:var(--gold)}
+.ncta{background:var(--gold)!important;color:var(--navy)!important;padding:10px 20px!important;border-bottom:none!important;font-weight:600!important;margin-left:10px}
+.hero{min-height:90vh;background:var(--navy);position:relative;display:flex;align-items:center;overflow:hidden}
+.hbg2{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(30,52,96,.8),transparent 60%),linear-gradient(135deg,var(--navy),var(--navy2) 50%,var(--navy3))}
+.hpat{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(255,255,255,1) 40px,rgba(255,255,255,1) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,1) 40px,rgba(255,255,255,1) 41px)}
+.hcon{position:relative;z-index:2;padding:0 48px;max-width:660px;animation:fadeUp .9s ease both}
+.hew{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.hew span{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--goldl)}
+.ewl{width:40px;height:1px;background:var(--gold)}
+.hero h2{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,76px);color:var(--w);line-height:1.05;font-weight:600;margin-bottom:14px}
+.hero h2 em{color:var(--goldl);font-style:italic}
+.hero p{font-size:15px;color:rgba(255,255,255,.6);line-height:1.85;max-width:480px;margin-bottom:36px;font-weight:300}
+.ha{display:flex;gap:14px;flex-wrap:wrap}
+.bp{background:var(--gold);color:var(--navy);padding:14px 34px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;transition:all .25s;display:inline-block}
+.bp:hover{background:var(--goldl);transform:translateY(-2px)}
+.bo{border:1px solid rgba(255,255,255,.35);color:var(--w);padding:14px 34px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .25s;display:inline-block}
+.bo:hover{border-color:var(--gold);color:var(--goldl)}
+.hst{position:absolute;bottom:44px;right:48px;display:flex;gap:36px;z-index:2}
+.hs .n{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--goldl);font-weight:600;line-height:1}
+.hs .l{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:2px;text-transform:uppercase;margin-top:3px;text-align:right}
+section{padding:80px 48px}
+.sh{text-align:center;margin-bottom:52px}
+.se{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);color:var(--navy);line-height:1.1;font-weight:600}
+.st em{font-style:italic;color:var(--gold)}
+.sd{width:44px;height:2px;background:var(--gold);margin:16px auto 0}
+.tbar{background:var(--navy2);padding:24px 48px;border-top:1px solid rgba(184,146,42,.3);border-bottom:1px solid rgba(184,146,42,.3)}
+.ti{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
+.tit{display:flex;align-items:center;gap:12px}
+.tic{font-size:20px}
+.tit strong{display:block;font-size:13px;color:var(--w)}
+.tit span{font-size:10px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase}
+.tsep{width:1px;height:30px;background:rgba(255,255,255,.1)}
+.cats{background:var(--cream);padding:80px 48px}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.cc{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--navy2)}
+.ccf{grid-row:span 2;aspect-ratio:auto}
+.cbg{position:absolute;inset:0;transition:transform .6s ease}
+.cb1{background:linear-gradient(160deg,#1a3a6e,#0c1b33)}
+.cb2{background:linear-gradient(160deg,#2d1810,#0c1b33)}
+.cb3{background:linear-gradient(160deg,#0d2d1a,#0c1b33)}
+.cc:hover .cbg{transform:scale(1.06)}
+.cov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 55%)}
+.cco{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2}
+.clabel{font-size:10px;color:var(--goldl);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.ctitle{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--w);font-weight:600;line-height:1.2;margin-bottom:12px}
+.csubt{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:12px}
+.car{width:34px;height:34px;border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;color:var(--w);transition:all .25s;font-size:16px}
+.cc:hover .car{background:var(--gold);border-color:var(--gold)}
+.ci{position:absolute;top:28px;right:28px;font-size:44px;opacity:.12;z-index:1}
+.prods{background:var(--w);padding:80px 48px}
+.ptabs{display:flex;justify-content:center;margin-bottom:40px;border-bottom:1px solid var(--g3)}
+.tb{padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--g2);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500}
+.tb.act,.tb:hover{color:var(--navy);border-bottom-color:var(--gold)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pc{background:var(--cream);cursor:pointer;transition:all .3s ease}
+.pc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(12,27,51,.1)}
+.pi{aspect-ratio:3/4;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:68px}
+.ptag{position:absolute;top:14px;left:14px;background:var(--navy);color:var(--goldl);font-size:9px;padding:4px 10px;letter-spacing:2px;text-transform:uppercase}
+.ptag.new{background:var(--gold);color:var(--navy)}
+.pinfo{padding:16px}
+.pname{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--navy);font-weight:600;margin-bottom:3px}
+.pdesc{font-size:11px;color:var(--g2);margin-bottom:10px;line-height:1.6}
+.pfoot{display:flex;justify-content:space-between;align-items:center}
+.pp{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);font-weight:600}
+.pp small{font-size:10px;color:var(--g2);display:block;font-family:'DM Sans',sans-serif;font-weight:400}
+.pbtn{width:34px;height:34px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--w);font-size:18px;flex-shrink:0;transition:background .2s;font-weight:300}
+.pc:hover .pbtn{background:var(--gold)}
+.proc{background:var(--navy);position:relative;overflow:hidden;padding:80px 48px}
+.pbgp{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.015) 80px,rgba(255,255,255,.015) 81px)}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:34px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.step{text-align:center;padding:0 12px}
+.sn{width:68px;height:68px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;background:var(--navy);font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);font-weight:600}
+.step h4{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--w);margin-bottom:7px;font-weight:600}
+.step p{font-size:11px;color:rgba(255,255,255,.42);line-height:1.75}
+.testi{background:var(--cream);padding:80px 48px}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tc{background:var(--w);padding:30px;border-top:3px solid var(--gold);box-shadow:0 2px 14px rgba(0,0,0,.04)}
+.qm{font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--goldp);line-height:.5;margin-bottom:14px;font-weight:700}
+.tt{font-size:13px;color:var(--g1);line-height:1.9;margin-bottom:20px;font-style:italic}
+.ta{display:flex;align-items:center;gap:12px;border-top:1px solid var(--g3);padding-top:16px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.aname{font-size:13px;font-weight:600;color:var(--navy)}
+.arole{font-size:11px;color:var(--g2)}
+.stars{color:var(--gold);font-size:12px;margin-bottom:10px}
+.clients{background:var(--w);padding:60px 48px}
+.cl-logos{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;align-items:center}
+.cll{padding:12px 20px;border:1px solid var(--g3);font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--g2);letter-spacing:2px;text-transform:uppercase;transition:all .2s}
+.cll:hover{border-color:var(--gold);color:var(--navy)}
+.ctaband{background:var(--gold);padding:68px 48px;text-align:center;position:relative;overflow:hidden}
+.ctaband::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(12,27,51,.04) 20px,rgba(12,27,51,.04) 21px)}
+.ctaband h3{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);color:var(--navy);margin-bottom:10px;position:relative;font-weight:600}
+.ctaband p{font-size:15px;color:rgba(12,27,51,.7);margin-bottom:30px;position:relative}
+.bd{background:var(--navy);color:var(--w);padding:14px 42px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;display:inline-block;transition:all .25s;position:relative}
+.bd:hover{background:var(--navy3);transform:translateY(-2px)}
+.cont{background:var(--navy2);padding:80px 48px}
+.cong{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:1080px;margin:0 auto}
+.coni h3{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--w);margin-bottom:8px;font-weight:600}
+.coni>p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px;line-height:1.8}
+.coit{display:flex;gap:14px;margin-bottom:22px;align-items:flex-start}
+.coic{width:38px;height:38px;border:1px solid rgba(184,146,42,.4);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;color:var(--goldl)}
+.coit h5{font-size:10px;color:var(--goldl);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.coit p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6}
+.cf{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:32px}
+.cf h4{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--w);margin-bottom:22px;font-weight:600}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--goldl);margin-bottom:6px}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px 13px;font-size:13px;color:var(--w);font-family:'DM Sans',sans-serif;transition:border .2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg select option{background:var(--navy);color:var(--w)}
+.fg textarea{resize:vertical;min-height:88px}
+.fsub{width:100%;background:var(--gold);color:var(--navy);padding:13px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;margin-top:6px}
+.fsub:hover{background:var(--goldl)}
+footer{background:var(--navy);border-top:2px solid rgba(184,146,42,.35)}
+.fm{padding:52px 48px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.fba .bmf{width:42px;height:42px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:700;margin-bottom:14px}
+.fba h3{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--w);letter-spacing:3px;font-weight:600;margin-bottom:3px}
+.fba p{font-size:9px;color:var(--goldl);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.fba span{font-size:12px;color:rgba(255,255,255,.42);line-height:1.8}
+.fc h5{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--goldl);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07)}
+.fc a{display:block;font-size:12px;color:rgba(255,255,255,.48);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.fc a:hover{color:var(--goldl)}
+.fbot{border-top:1px solid rgba(255,255,255,.06);padding:16px 48px;display:flex;justify-content:space-between;align-items:center}
+.fbot p{font-size:11px;color:rgba(255,255,255,.25);letter-spacing:1px}
+.fsoc{display:flex;gap:8px}
+.sb{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s}
+.sb:hover{border-color:var(--gold);color:var(--gold)}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.mo.open{opacity:1;pointer-events:all}
+.md{background:var(--w);max-width:480px;width:92%;max-height:88vh;overflow-y:auto}
+.mh{background:var(--navy);padding:22px 26px;display:flex;justify-content:space-between;align-items:center}
+.mh h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--w);font-weight:600}
+.mcl{background:none;border:none;color:rgba(255,255,255,.55);font-size:22px;cursor:pointer;line-height:1}
+.mb{padding:26px}
+.mi{aspect-ratio:4/3;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:80px;margin-bottom:18px}
+.mtag{font-size:10px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.mn{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--navy);font-weight:600;margin-bottom:6px}
+.mpr{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);margin-bottom:12px;font-weight:600}
+.mde{font-size:13px;color:var(--g2);line-height:1.85;margin-bottom:18px}
+.mf2{border-top:1px solid var(--g3);padding-top:16px;margin-bottom:18px}
+.mf2 h5{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
+.fl2{display:flex;flex-wrap:wrap;gap:6px}
+.fch{background:var(--cream);border:1px solid var(--g3);padding:4px 10px;font-size:10px;color:var(--g1)}
+.ma2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bm1{background:var(--navy);color:var(--w);padding:12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+.bm2{background:none;color:var(--navy);padding:12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:2px solid var(--navy);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.bm2:hover{background:var(--navy);color:var(--w)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hbg span{width:24px;height:2px;background:var(--w);display:block}
+.mmenu{position:fixed;inset:0;background:var(--navy);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .4s ease}
+.mmenu.open{transform:none}
+.mmenu a{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--w);text-decoration:none;letter-spacing:2px}
+.fi{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fi.vis{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){.pg{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(3,1fr);gap:24px}.steps::before{display:none}.fm{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.topbar{display:none}nav{padding:0 20px}.nl{display:none}.hbg{display:flex}section,.cats,.prods,.proc,.testi,.clients,.cont{padding:56px 20px}.hcon{padding:0 20px}.hst{bottom:20px;right:20px;gap:24px}.hs .n{font-size:28px}.ti{gap:20px}.tsep{display:none}.cg{grid-template-columns:1fr}.ccf{grid-row:auto}.pg{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.tg{grid-template-columns:1fr}.cong{grid-template-columns:1fr}.fm{grid-template-columns:1fr;gap:24px;padding:32px 20px}.fbot{flex-direction:column;gap:12px;padding:14px 20px;text-align:center}.fr{grid-template-columns:1fr}.ma2{grid-template-columns:1fr}}
+@media(max-width:480px){.pg{grid-template-columns:1fr}.hst{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>Hotline: 0901 234 567 | info@nhamaythaiduong.vn</span><div><a href="#">Tieng Viet</a><a href="#">English</a><a href="#">Zalo OA</a></div></div>
+<nav>
+  <div class="nb"><div class="bm">TD</div><div class="bn"><h1>NHA MAY THAI DUONG</h1><p>Dong Phuc Chuyen Nghiep · Est. 2010</p></div></div>
+  <div class="nl"><a href="#" class="act">Trang Chu</a><a href="#cats">San Pham</a><a href="#proc">Quy Trinh</a><a href="#testi">Khach Hang</a><a href="#about">Ve Chung Toi</a><a href="#cont" class="ncta">Bao Gia Ngay</a></div>
+  <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="mmenu" id="mmenu"><a href="#" onclick="closeMM()">Trang Chu</a><a href="#cats" onclick="closeMM()">San Pham</a><a href="#proc" onclick="closeMM()">Quy Trinh</a><a href="#cont" onclick="closeMM()">Lien He</a></div>
+<section class="hero">
+  <div class="hbg2"></div><div class="hpat"></div>
+  <div class="hcon">
+    <div class="hew"><div class="ewl"></div><span>Dong Phuc Chuyen Nghiep · Tin Cay</span></div>
+    <h2>Dinh Hinh<br><em>Thuong Hieu</em><br>Cua Ban</h2>
+    <p>Chuyen cung cap dong phuc cao cap cho truong hoc, doanh nghiep va to chuc. Thiet ke rieng, chat luong ben vung, giao hang dung hen.</p>
+    <div class="ha"><a href="#cont" class="bp">Yeu Cau Bao Gia</a><a href="#cats" class="bo">Xem San Pham</a></div>
+  </div>
+  <div class="hst"><div class="hs"><div class="n">500+</div><div class="l">Khach hang</div></div><div class="hs"><div class="n">14</div><div class="l">Nam kinh nghiem</div></div><div class="hs"><div class="n">50K+</div><div class="l">Bo dong phuc</div></div></div>
+</section>
+<div class="tbar"><div class="ti">
+  <div class="tit"><div class="tic">&#127942;</div><div><strong>Top 10 Thuong Hieu</strong><span>Dong Phuc Uy Tin 2023</span></div></div>
+  <div class="tsep"></div>
+  <div class="tit"><div class="tic">&#9986;</div><div><strong>Xuong San Xuat</strong><span>Tieu Chuan ISO 9001</span></div></div>
+  <div class="tsep"></div>
+  <div class="tit"><div class="tic">&#128666;</div><div><strong>Giao Hang Toan Quoc</strong><span>Trong 7-14 Ngay</span></div></div>
+  <div class="tsep"></div>
+  <div class="tit"><div class="tic">&#128260;</div><div><strong>Bao Hanh 12 Thang</strong><span>Doi Tra De Dang</span></div></div>
+  <div class="tsep"></div>
+  <div class="tit"><div class="tic">&#128172;</div><div><strong>Tu Van Mien Phi</strong><span>Thiet Ke Theo Yeu Cau</span></div></div>
+</div></div>
+<section class="cats" id="cats">
+  <div class="sh fi"><span class="se">Danh Muc San Pham</span><h2 class="st">Dong Phuc <em>Cho Moi Nganh</em></h2><div class="sd"></div></div>
+  <div class="cg fi">
+    <div class="cc ccf" onclick="showTab('school')"><div class="cbg cb1"></div><div class="cov"></div><div class="ci">&#127891;</div><div class="cco"><div class="clabel">Danh Muc Noi Bat</div><div class="ctitle">Dong Phuc Truong Hoc</div><div class="csubt">Mam non · Tieu hoc · THCS/THPT · Quoc te</div><div class="car">&#8594;</div></div></div>
+    <div class="cc" onclick="showTab('corp')"><div class="cbg cb2"></div><div class="cov"></div><div class="ci">&#127970;</div><div class="cco"><div class="clabel">Doanh Nghiep</div><div class="ctitle">Dong Phuc Van Phong</div><div class="car">&#8594;</div></div></div>
+    <div class="cc" onclick="showTab('fb')"><div class="cbg cb3"></div><div class="cov"></div><div class="ci">&#127869;</div><div class="cco"><div class="clabel">Nha Hang &amp; Khach San</div><div class="ctitle">F&amp;B / Hospitality</div><div class="car">&#8594;</div></div></div>
+  </div>
+</section>
+<section class="prods" id="prods">
+  <div class="sh fi"><span class="se">San Pham</span><h2 class="st">Bo Suu Tap <em>Tieu Bieu</em></h2><div class="sd"></div></div>
+  <div class="ptabs fi">
+    <button class="tb act" onclick="showTab('school',this)">Truong Hoc</button>
+    <button class="tb" onclick="showTab('corp',this)">Doanh Nghiep</button>
+    <button class="tb" onclick="showTab('fb',this)">Nha Hang</button>
+    <button class="tb" onclick="showTab('event',this)">Su Kien</button>
+  </div>
+  <div id="t-school" class="pg fi">
+    <div class="pc" onclick="openModal('Dong Phuc Tieu Hoc','Tieu Hoc','&#127979;','Lien he bao gia','Dong phuc tieu hoc trang nha, ben mau, an toan cho tre. Vai cotton cao cap thoang khi, de giat va giu form dep ca nam hoc.',['Cotton 100%','Mau chuan BYT','Size 6-14 tuoi','In logo truong'])"><div class="pi" style="background:#EBF0FA"><span class="ptag">Ban chay</span>&#127979;</div><div class="pinfo"><div class="pname">Dong Phuc Tieu Hoc</div><div class="pdesc">Cotton 100% · Nhieu mau · Size 6-14</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc THPT','THPT','&#128218;','Lien he bao gia','Phong cach lich su, phu hop lua tuoi cap 3. Ao so mi trang ket hop quan/vay navy truyen thong.',['Vai kaki cao cap','Theu ten truong','Ao + Quan/Vay','Bao hanh 1 nam'])"><div class="pi" style="background:#F0EBF5"><span class="ptag new">Moi 2024</span>&#128218;</div><div class="pinfo"><div class="pname">Dong Phuc THPT</div><div class="pdesc">Kaki cao cap · Navy &amp; Trang · Theu logo</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc Mam Non','Mam Non','&#127752;','Lien he bao gia','Mau sac tuoi sang, vai mem mai an toan cho be. Thiet ke linh hoat, de mac coi, kem theu ten be theo yeu cau.',['Vai mem an toan','Khong chat doc hai','Size 1-6 tuoi','Theu ten be'])"><div class="pi" style="background:#FFF3E0">&#127752;</div><div class="pinfo"><div class="pname">Dong Phuc Mam Non</div><div class="pdesc">Vai mem an toan · Mau sac tuoi sang</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Truong Quoc Te','Quoc Te','&#127757;','Lien he bao gia','Thiet ke chuan quoc te, thanh lich va hien dai. Phu hop cho cac truong song ngu tai Viet Nam.',['Thiet ke rieng','Chat lieu cao cap','Blazer + Trousers','Theu logo tinh xao'])"><div class="pi" style="background:#E8F4FD"><span class="ptag new">Premium</span>&#127757;</div><div class="pinfo"><div class="pname">Truong Quoc Te</div><div class="pdesc">Blazer + Quan · Chuan quoc te</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+  </div>
+  <div id="t-corp" class="pg fi" style="display:none">
+    <div class="pc" onclick="openModal('Vest Cong So Nam','Doanh Nghiep','&#128084;','Lien he bao gia','Vest cong so cat may tinh xao, vai Polyester cao cap. Phu hop cho nhan vien van phong va quan ly.',['Vest 2 nut','Vai Poly cao cap','Du size S-3XL','Theu logo cong ty'])"><div class="pi" style="background:#EDF2F7"><span class="ptag">Pho bien</span>&#128084;</div><div class="pinfo"><div class="pname">Vest Cong So Nam</div><div class="pdesc">Vai Poly cao cap · Cat may tinh xao</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc Nu Cong So','Doanh Nghiep','&#128099;','Lien he bao gia','Thiet ke thanh lich cho nu nhan vien van phong. Vest nu voi nhieu tong mau phu hop nhan dien thuong hieu.',['Ao so mi/Vest nu','Vai lua matte','Nhieu mau tuy chon','Theu logo'])"><div class="pi" style="background:#F5F0F5"><span class="ptag new">Hot</span>&#128099;</div><div class="pinfo"><div class="pname">Dong Phuc Nu Cong So</div><div class="pdesc">Vest nu · Thanh lich · Theo mau thuong hieu</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Ao Polo Doanh Nghiep','Doanh Nghiep','&#9889;','Lien he bao gia','Ao polo cao cap cho doi ngu ky thuat va dich vu khach hang. In/theu logo sac net, ben mau.',['Cotton PE','In/Theu logo','Size S-4XL','Dat tu 50 cai'])"><div class="pi" style="background:#EFF9F0">&#9889;</div><div class="pinfo"><div class="pname">Ao Polo Doanh Nghiep</div><div class="pdesc">Cotton PE · In/Theu logo · Size S-4XL</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc Bao Ve','Doanh Nghiep','&#128737;','Lien he bao gia','Dong phuc bao ve chuyen nghiep. Vai day dan, mau sac nghiem tuc, kem phu hieu day du.',['Vai day dan','Mau navy/den','Kem phu hieu','Du phu kien'])"><div class="pi" style="background:#EDF2F7">&#128737;</div><div class="pinfo"><div class="pname">Dong Phuc Bao Ve</div><div class="pdesc">Vai day · Mau chuan · Kem phu kien</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+  </div>
+  <div id="t-fb" class="pg fi" style="display:none">
+    <div class="pc" onclick="openModal('Fine Dining Uniform','Nha Hang','&#127863;','Lien he bao gia','Thiet ke sang trong cho nhan vien nha hang cao cap. Ao vest den, no buom, phong cach Au lich lam.',['Vest den cao cap','No buom/ca vat','Tap de da','Chuan fine dining'])"><div class="pi" style="background:#1A1A2E">&#127863;</div><div class="pinfo"><div class="pname">Fine Dining Uniform</div><div class="pdesc">Vest den · No buom · Sang trong</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Khach San 5 Sao','Khach San','&#127976;','Lien he bao gia','Chuan 5 sao quoc te: bo dong phuc le tan, buong phong, nha hang va concierge.',['Thiet ke custom','Vai cao cap','Day du bo phan','Chuan 5 sao'])"><div class="pi" style="background:#1A2A3A"><span class="ptag new">Premium</span>&#127976;</div><div class="pinfo"><div class="pname">Khach San 5 Sao</div><div class="pdesc">Custom · Chuan quoc te · Full set</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Trang Phuc Bep','Nha Bep','&#128104;&#8205;&#127859;','Lien he bao gia','Ao bep chuyen nghiep, vai chiu nhiet va de giat. Kem tap de, mu bep va khan theo set.',['Vai chiu nhiet','Thoang mat','Tap de + Mu','De giat'])"><div class="pi" style="background:#E8F4F0">&#128104;&#8205;&#127859;</div><div class="pinfo"><div class="pname">Trang Phuc Bep</div><div class="pdesc">Chiu nhiet · Thoang mat · Set day du</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc Spa','Spa','&#128134;','Lien he bao gia','Vai lua mem min, mau pastel nhe nhang. Phu hop cho nhan vien spa va tham my vien.',['Vai lua cao cap','Mau pastel','Thoai mai chuyen dong','Thiet ke tinh te'])"><div class="pi" style="background:#F0EBF5">&#128134;</div><div class="pinfo"><div class="pname">Dong Phuc Spa</div><div class="pdesc">Lua cao cap · Pastel · Nhe nhang</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+  </div>
+  <div id="t-event" class="pg fi" style="display:none">
+    <div class="pc" onclick="openModal('Ao Thun Su Kien','Su Kien','&#127914;','Lien he bao gia','In lua hoac in ky thuat so sac net. Phu hop cho hoi nghi, team building, khai truong.',['In lua/DTG','Ben mau','Tu 50 cai','Giao nhanh 5 ngay'])"><div class="pi" style="background:#FFF0E0"><span class="ptag">Giao nhanh</span>&#127914;</div><div class="pinfo"><div class="pname">Ao Thun Su Kien</div><div class="pdesc">In sac net · Giao 5 ngay · SL lon</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+    <div class="pc" onclick="openModal('Dong Phuc The Thao','The Thao','&#9917;','Lien he bao gia','Vai the thao thoang mat, co gian 4 chieu. Phu hop cho cau lac bo, truong hoc va giai dau noi bo.',['Vai the thao co gian','In ten so','Doi hinh thi dau','Dat tu 10 bo'])"><div class="pi" style="background:#E8F4E8">&#9917;</div><div class="pinfo"><div class="pname">Dong Phuc The Thao</div><div class="pdesc">Co gian 4D · In ten so · Tu 10 bo</div><div class="pfoot"><div class="pp">Lien he<small>Bao gia theo SL</small></div><div class="pbtn">+</div></div></div></div>
+  </div>
+</section>
+<section class="proc" id="proc">
+  <div class="pbgp"></div>
+  <div class="sh fi"><span class="se">Quy Trinh Lam Viec</span><h2 class="st" style="color:var(--w)">6 Buoc <em style="color:var(--goldl)">Don Gian</em></h2><div class="sd"></div></div>
+  <div class="steps fi">
+    <div class="step"><div class="sn">01</div><h4>Lien He Tu Van</h4><p>Goi dien, Zalo hoac dien form. Tu van vien phan hoi trong 2 gio.</p></div>
+    <div class="step"><div class="sn">02</div><h4>Khao Sat Nhu Cau</h4><p>Tim hieu so luong, yeu cau thiet ke, chat lieu va ngan sach.</p></div>
+    <div class="step"><div class="sn">03</div><h4>Thiet Ke Mau</h4><p>Doi thiet ke gui ban ve 2D/3D trong 24-48 gio, chinh sua mien phi.</p></div>
+    <div class="step"><div class="sn">04</div><h4>Duyet &amp; Dat Coc</h4><p>Xac nhan mau, ky hop dong va dat coc 30-50% de san xuat.</p></div>
+    <div class="step"><div class="sn">05</div><h4>San Xuat &amp; QC</h4><p>San xuat tai xuong chuan ISO. Kiem tra chat luong 100% truoc dong goi.</p></div>
+    <div class="step"><div class="sn">06</div><h4>Giao Hang &amp; Hau Mai</h4><p>Giao toan quoc, bao hanh 12 thang, ho tro doi tra nhanh chong.</p></div>
+  </div>
+</section>
+<section class="testi" id="testi">
+  <div class="sh fi"><span class="se">Khach Hang Noi Gi</span><h2 class="st">Tin Tuong <em>Tu Doi Tac</em></h2><div class="sd"></div></div>
+  <div class="tg fi">
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="qm">"</div><div class="tt">Truong chung toi da hop tac voi Nha May Thai Duong duoc 5 nam. Chat luong luon on dinh, giao dung hen dau nam hoc va doi ngu tu van rat tan tam.</div><div class="ta"><div class="av">&#128105;&#8205;&#128188;</div><div><div class="aname">Co Nguyen Thi Lan</div><div class="arole">Hieu truong · Truong TH Nguyen Du, Ha Noi</div></div></div></div>
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="qm">"</div><div class="tt">Cong ty chung toi dat 200 bo dong phuc cho toan bo nhan vien. Tu thiet ke den giao hang chi 10 ngay, dung mau thuong hieu va theu logo sac net.</div><div class="ta"><div class="av">&#128104;&#8205;&#128188;</div><div><div class="aname">Anh Tran Minh Khoa</div><div class="arole">Giam doc HR · Cong ty CP Vina Tech</div></div></div></div>
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="qm">"</div><div class="tt">Nha hang toi mo chuoi 3 chi nhanh can dong phuc dong bo va sang trong. Thai Duong hieu ngay concept fine dining va cho ra mau rat ung y.</div><div class="ta"><div class="av">&#128104;&#8205;&#127859;</div><div><div class="aname">Chef Le Hoang Hai</div><div class="arole">Chu so huu · Chuoi NH The Garden, Da Nang</div></div></div></div>
+  </div>
+</section>
+<section class="clients" id="about">
+  <div class="sh fi"><span class="se">Doi Tac Tin Cay</span><h2 class="st">Khach Hang <em>Tieu Bieu</em></h2><div class="sd"></div></div>
+  <div class="cl-logos fi"><div class="cll">Vingroup</div><div class="cll">FPT Schools</div><div class="cll">Marriott HN</div><div class="cll">Masan Group</div><div class="cll">Lotte Hotels</div><div class="cll">VinSchool</div><div class="cll">Hyatt Regency</div><div class="cll">Truong Doan</div></div>
+</section>
+<div class="ctaband"><h3>San Sang Tao Dong Phuc?</h3><p>Nhan bao gia mien phi trong 2 gio - Thiet ke mau trong 48 gio</p><a href="#cont" class="bd">Yeu Cau Bao Gia Ngay</a></div>
+<section class="cont" id="cont">
+  <div class="cong">
+    <div class="coni fi">
+      <h3>Lien He &amp;<br>Bao Gia</h3>
+      <p>Doi ngu tu van san sang ho tro tu Thu 2 den Thu 7, 8:00-18:00.</p>
+      <div class="coit"><div class="coic">&#128205;</div><div><h5>Showroom</h5><p>123 Nguyen Trai, Quan 1, TP. Ho Chi Minh<br>456 Tran Phu, Hoan Kiem, Ha Noi</p></div></div>
+      <div class="coit"><div class="coic">&#128222;</div><div><h5>Hotline</h5><p>0901 234 567 (TP.HCM) · 0912 345 678 (Ha Noi)</p></div></div>
+      <div class="coit"><div class="coic">&#128231;</div><div><h5>Email</h5><p>info@nhamaythaiduong.vn</p></div></div>
+      <div class="coit"><div class="coic">&#128172;</div><div><h5>Zalo / Messenger</h5><p>Nhan tin Zalo OA · Phan hoi trong 30 phut</p></div></div>
+    </div>
+    <div class="cf fi">
+      <h4>Yeu Cau Bao Gia</h4>
+      <div class="fr"><div class="fg"><label>Ho va Ten *</label><input type="text" placeholder="Nguyen Van A"></div><div class="fg"><label>So Dien Thoai *</label><input type="tel" placeholder="0901 234 567"></div></div>
+      <div class="fg"><label>Ten Truong / Doanh Nghiep</label><input type="text" placeholder="Truong THPT ABC / Cong ty XYZ"></div>
+      <div class="fr">
+        <div class="fg"><label>Loai Dong Phuc *</label><select><option value="">-- Chon loai --</option><option>Dong phuc Truong hoc</option><option>Dong phuc Doanh nghiep</option><option>Dong phuc Nha hang</option><option>Ao thun Su kien</option><option>Khac</option></select></div>
+        <div class="fg"><label>So Luong Du Kien</label><select><option>50-100 bo</option><option>100-300 bo</option><option>300-500 bo</option><option>500+ bo</option></select></div>
+      </div>
+      <div class="fg"><label>Yeu Cau Them</label><textarea placeholder="Mo ta mau sac, phong cach, thoi gian giao hang..."></textarea></div>
+      <button class="fsub" onclick="handleSubmit(this)">Gui Yeu Cau Bao Gia &rarr;</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="fm">
+    <div class="fba"><div class="bmf">TD</div><h3>NHA MAY THAI DUONG</h3><p>Dong Phuc Chuyen Nghiep · Est. 2010</p><span>Hon 14 nam kinh nghiem cung cap dong phuc chat luong cao cho truong hoc, doanh nghiep va nha hang tren toan quoc.</span></div>
+    <div class="fc"><h5>San Pham</h5><a href="#">Dong phuc Truong hoc</a><a href="#">Dong phuc Doanh nghiep</a><a href="#">Dong phuc Nha hang</a><a href="#">Ao thun Su kien</a><a href="#">Phu kien &amp; In theu</a></div>
+    <div class="fc"><h5>Dich Vu</h5><a href="#">Thiet ke theo yeu cau</a><a href="#">Quy trinh dat hang</a><a href="#">Bang gia &amp; Chiet khau</a><a href="#">Giao hang toan quoc</a><a href="#">Bao hanh &amp; Doi tra</a></div>
+    <div class="fc"><h5>Cong Ty</h5><a href="#">Ve Nha May Thai Duong</a><a href="#">Du an tieu bieu</a><a href="#">Tin tuc &amp; Tu van</a><a href="#">Tuyen dung</a><a href="#">Lien he</a></div>
+  </div>
+  <div class="fbot"><p>&copy; 2024 Nha May Thai Duong · MST: 0123456789 · Chinh sach bao mat</p><div class="fsoc"><a href="#" class="sb">f</a><a href="#" class="sb">in</a><a href="#" class="sb">Z</a><a href="#" class="sb">&#9654;</a></div></div>
+</footer>
+<div class="mo" id="mo" onclick="if(event.target.id==='mo')closeModal()">
+  <div class="md">
+    <div class="mh"><h3 id="mT">Chi Tiet San Pham</h3><button class="mcl" onclick="closeModal()">&#10005;</button></div>
+    <div class="mb">
+      <div class="mi" id="mI"></div>
+      <div class="mtag" id="mTag"></div>
+      <div class="mn" id="mN"></div>
+      <div class="mpr" id="mPr"></div>
+      <div class="mde" id="mDe"></div>
+      <div class="mf2"><h5>Dac Diem Noi Bat</h5><div class="fl2" id="mF"></div></div>
+      <div class="ma2"><button class="bm1" onclick="document.getElementById('cont').scrollIntoView({behavior:'smooth'});closeModal()">Yeu Cau Bao Gia</button><button class="bm2" onclick="closeModal()">Xem Them San Pham</button></div>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('hbg').onclick=function(){document.getElementById('mmenu').classList.toggle('open')};
+function closeMM(){document.getElementById('mmenu').classList.remove('open')}
+function showTab(t,btn){
+  ['school','corp','fb','event'].forEach(function(x){var e=document.getElementById('t-'+x);if(e)e.style.display='none'});
+  var el=document.getElementById('t-'+t);if(el)el.style.display='grid';
+  if(btn){document.querySelectorAll('.tb').forEach(function(b){b.classList.remove('act')});btn.classList.add('act')}
+}
+function openModal(name,cat,icon,price,desc,features){
+  document.getElementById('mT').innerHTML=name;
+  document.getElementById('mI').innerHTML=icon;
+  document.getElementById('mTag').innerHTML='&mdash; '+cat+' &mdash;';
+  document.getElementById('mN').innerHTML=name;
+  document.getElementById('mPr').innerHTML=price;
+  document.getElementById('mDe').innerHTML=desc;
+  document.getElementById('mF').innerHTML=features.map(function(f){return'<span class="fch">'+f+'</span>'}).join('');
+  document.getElementById('mo').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('mo').classList.remove('open');document.body.style.overflow=''}
+function handleSubmit(btn){btn.textContent='Da gui! Chung toi se lien he trong 2 gio.';btn.style.background='#0C1B33';btn.style.color='#fff';btn.disabled=true}
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.1});
+document.querySelectorAll('.fi').forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
